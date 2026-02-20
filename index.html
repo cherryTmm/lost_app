@@ -50,9 +50,12 @@
         Transform your daily routine into a legendary journey. Master skills, conquer real-world challenges, and level
         up the most important character: <strong>You.</strong>
       </p>
-      <a href="#cta-bottom" class="btn-start" id="btn-start">
-        <span class="btn-icon">🗡️</span> Start Your Adventure
-      </a>
+      <div class="hero-btns">
+        <a href="#join" class="btn btn-primary">Start Your Quest</a>
+        <a href="#how" class="btn btn-secondary">How it Works</a>
+        <button id="test-xp-btn" class="btn btn-secondary"
+          style="background: rgba(255,255,255,0.1); border: 1.5px dashed var(--accent);">Test Quest (+25 XP)</button>
+      </div>
 
       <!-- mini stat cards -->
       <div class="mini-stats">
@@ -401,6 +404,29 @@
     }, { threshold: 0.15 });
     reveals.forEach(el => { el.classList.add('reveal'); observer.observe(el); });
   </script>
+  <!-- ====== XP REWARD COMPONENT ====== -->
+  <div id="reward-overlay" class="reward-overlay">
+    <div class="reward-card">
+      <div class="xp-gain-popup">+25 XP</div>
+      <div class="reward-header">
+        <span class="level-badge">LVL <span id="reward-lvl">24</span></span>
+        <h3>Quest Completed!</h3>
+      </div>
+      <div class="xp-bar-container">
+        <div id="reward-xp-bar" class="xp-bar-fill" style="width: 65%;"></div>
+        <div class="xp-shimmer"></div>
+      </div>
+      <div class="xp-text"><span id="reward-xp-current">650</span> / 1000 XP</div>
+    </div>
+    <div id="level-up-banner" class="level-up-banner">
+      <div class="banner-glow"></div>
+      <h2>LEVEL UP!</h2>
+      <p>Your attributes have increased</p>
+    </div>
+    <canvas id="confetti-canvas"></canvas>
+  </div>
+
+  <script src="js/xp-reward.js"></script>
 </body>
 
 </html>
