@@ -169,55 +169,96 @@
   </section>
 
 
-  <!-- ====== MAIN QUEST ROADMAP ====== -->
+  <!-- ====== LEGENDARY MAIN QUEST ROADMAP ====== -->
   <section class="roadmap-section" id="roadmap">
+    <!-- Decorative Background Elements -->
+    <div class="roadmap-bg-elements">
+      <div class="bg-element tree-1">🌲</div>
+      <div class="bg-element tree-2">🌲</div>
+      <div class="bg-element mountain-1">⛰️</div>
+      <div class="bg-element cloud-1">☁️</div>
+      <div class="bg-element cloud-2">☁️</div>
+      <div class="bg-element sparkles-1">✨</div>
+    </div>
+
     <div class="roadmap-container">
       <h2 class="section-title">Your Legend Awakens</h2>
-      <p class="section-sub">Follow the path of the protagonist and conquer your ultimate goals.</p>
+      <p class="section-sub">Embark on an epic journey across the realms of self-mastery.</p>
 
       <div class="roadmap-wrapper">
-        <!-- SVG Path for the road -->
+        <!-- Enhanced SVG Path with Gradients and Glowing trail -->
         <svg class="roadmap-svg" viewBox="0 0 1000 400" preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="pathGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" style="stop-color:var(--forest-light);stop-opacity:1" />
+              <stop offset="50%" style="stop-color:var(--adventure-red);stop-opacity:1" />
+              <stop offset="100%" style="stop-color:var(--forest-light);stop-opacity:1" />
+            </linearGradient>
+            <filter id="glow">
+              <feGaussianBlur stdDeviation="4" result="coloredBlur" />
+              <feMerge>
+                <feMergeNode in="coloredBlur" />
+                <feMergeNode in="SourceGraphic" />
+              </feMerge>
+            </filter>
+          </defs>
           <path class="roadmap-path-bg"
-            d="M0,100 C150,100 250,300 400,300 C550,300 650,100 800,100 C900,100 1000,200 1000,200" />
+            d="M0,150 C150,150 250,350 400,350 C550,350 650,150 800,150 C900,150 1000,250 1000,250" />
           <path class="roadmap-path-glow"
-            d="M0,100 C150,100 250,300 400,300 C550,300 650,100 800,100 C900,100 1000,200 1000,200" />
+            d="M0,150 C150,150 250,350 400,350 C550,350 650,150 800,150 C900,150 1000,250 1000,250" />
+          <path class="roadmap-path-active"
+            d="M0,150 C150,150 250,350 400,350 C550,350 650,150 800,150 C900,150 1000,250 1000,250" />
         </svg>
 
         <div class="milestones">
           <!-- Milestone 1 -->
-          <div class="milestone" style="left: 5%; top: 25%;"
+          <div class="milestone island-style" style="left: 5%; top: 37%;"
             data-tooltip="Chapter 1: The Awakening. Define your purpose and take the first step.">
-            <div class="milestone-icon">🌱</div>
-            <div class="milestone-label">The Awakening</div>
+            <div class="island-base"></div>
+            <div class="milestone-content">
+              <div class="milestone-icon">🌱</div>
+              <div class="milestone-label">The Awakening</div>
+            </div>
           </div>
 
           <!-- Milestone 2 -->
-          <div class="milestone" style="left: 25%; top: 45%;"
+          <div class="milestone island-style" style="left: 25%; top: 57%;"
             data-tooltip="Chapter 2: The Trial of Focus. Master your attention and conquer daily tasks.">
-            <div class="milestone-icon">⚔️</div>
-            <div class="milestone-label">Trial of Focus</div>
+            <div class="island-base"></div>
+            <div class="milestone-content">
+              <div class="milestone-icon">⚔️</div>
+              <div class="milestone-label">Trial of Focus</div>
+            </div>
           </div>
 
           <!-- Milestone 3 -->
-          <div class="milestone" style="left: 50%; top: 75%;"
+          <div class="milestone island-style" style="left: 50%; top: 87%;"
             data-tooltip="Chapter 3: The Social Forge. Build meaningful connections and grow your tribe.">
-            <div class="milestone-icon">🤝</div>
-            <div class="milestone-label">Social Forge</div>
+            <div class="island-base"></div>
+            <div class="milestone-content">
+              <div class="milestone-icon">🤝</div>
+              <div class="milestone-label">Social Forge</div>
+            </div>
           </div>
 
           <!-- Milestone 4 -->
-          <div class="milestone" style="left: 75%; top: 25%;"
+          <div class="milestone island-style" style="left: 75%; top: 37%;"
             data-tooltip="Chapter 4: The Peak of Mastery. Reach the pinnacle of your primary skill.">
-            <div class="milestone-icon">🏔️</div>
-            <div class="milestone-label">Peak Mastery</div>
+            <div class="island-base"></div>
+            <div class="milestone-content">
+              <div class="milestone-icon">🏔️</div>
+              <div class="milestone-label">Peak Mastery</div>
+            </div>
           </div>
 
           <!-- Milestone 5 -->
-          <div class="milestone" style="left: 95%; top: 50%;"
+          <div class="milestone island-style" style="left: 95%; top: 62%;"
             data-tooltip="Chapter 5: Legend Status. Your story is now etched in history.">
-            <div class="milestone-icon">👑</div>
-            <div class="milestone-label">Legend Status</div>
+            <div class="island-base"></div>
+            <div class="milestone-content">
+              <div class="milestone-icon">👑</div>
+              <div class="milestone-label">Legend Status</div>
+            </div>
           </div>
         </div>
       </div>
