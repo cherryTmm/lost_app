@@ -169,7 +169,60 @@
   </section>
 
 
-  <!-- ====== FEATURES ====== -->
+  <!-- ====== MAIN QUEST ROADMAP ====== -->
+  <section class="roadmap-section" id="roadmap">
+    <div class="roadmap-container">
+      <h2 class="section-title">Your Legend Awakens</h2>
+      <p class="section-sub">Follow the path of the protagonist and conquer your ultimate goals.</p>
+
+      <div class="roadmap-wrapper">
+        <!-- SVG Path for the road -->
+        <svg class="roadmap-svg" viewBox="0 0 1000 400" preserveAspectRatio="none">
+          <path class="roadmap-path-bg"
+            d="M0,100 C150,100 250,300 400,300 C550,300 650,100 800,100 C900,100 1000,200 1000,200" />
+          <path class="roadmap-path-glow"
+            d="M0,100 C150,100 250,300 400,300 C550,300 650,100 800,100 C900,100 1000,200 1000,200" />
+        </svg>
+
+        <div class="milestones">
+          <!-- Milestone 1 -->
+          <div class="milestone" style="left: 5%; top: 25%;"
+            data-tooltip="Chapter 1: The Awakening. Define your purpose and take the first step.">
+            <div class="milestone-icon">🌱</div>
+            <div class="milestone-label">The Awakening</div>
+          </div>
+
+          <!-- Milestone 2 -->
+          <div class="milestone" style="left: 25%; top: 45%;"
+            data-tooltip="Chapter 2: The Trial of Focus. Master your attention and conquer daily tasks.">
+            <div class="milestone-icon">⚔️</div>
+            <div class="milestone-label">Trial of Focus</div>
+          </div>
+
+          <!-- Milestone 3 -->
+          <div class="milestone" style="left: 50%; top: 75%;"
+            data-tooltip="Chapter 3: The Social Forge. Build meaningful connections and grow your tribe.">
+            <div class="milestone-icon">🤝</div>
+            <div class="milestone-label">Social Forge</div>
+          </div>
+
+          <!-- Milestone 4 -->
+          <div class="milestone" style="left: 75%; top: 25%;"
+            data-tooltip="Chapter 4: The Peak of Mastery. Reach the pinnacle of your primary skill.">
+            <div class="milestone-icon">🏔️</div>
+            <div class="milestone-label">Peak Mastery</div>
+          </div>
+
+          <!-- Milestone 5 -->
+          <div class="milestone" style="left: 95%; top: 50%;"
+            data-tooltip="Chapter 5: Legend Status. Your story is now etched in history.">
+            <div class="milestone-icon">👑</div>
+            <div class="milestone-label">Legend Status</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
   <section class="features" id="features">
     <h2 class="section-title">Forge Your Path</h2>
     <p class="section-sub">Every day is a new chapter. Choose the challenges that define you.</p>
@@ -300,7 +353,7 @@
     });
 
     /* ---- Intersection Observer reveal ---- */
-    const reveals = document.querySelectorAll('.feature-card, .step, .quest-card, .cta-bottom h2, .cta-bottom p, .cta-bottom .btn-start, .character-stats');
+    const reveals = document.querySelectorAll('.feature-card, .step, .quest-card, .cta-bottom h2, .cta-bottom p, .cta-bottom .btn-start, .character-stats, .roadmap-section');
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
     }, { threshold: 0.15 });
